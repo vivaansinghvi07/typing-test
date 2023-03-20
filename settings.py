@@ -8,12 +8,12 @@ def printIntro():
     
     # defines title
     title = "Welcome to Typing Test!"
-    colors = ["RED", "YELLOW", "GREEN", "BLUE", "MAGENTA", "LIGHTMAGENTA_EX"]
+    colors = ["RED", "YELLOW", "GREEN", "BLUE", "MAGENTA"]
     fore = "Fore."
 
     # prints title in rainbow
     for i in range(len(title)):
-        print(f"{eval(fore + colors[i%6])}{title[i]}", end="")
+        print(f"{eval(fore + colors[i%len(colors)])}{title[i]}", end="")
     
     # resets and new line
     print(Fore.RESET)
@@ -51,3 +51,5 @@ def getLengthSettings():
     
     # returns chosen number
     return option
+
+printIntro()
