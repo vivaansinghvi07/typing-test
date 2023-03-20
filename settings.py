@@ -23,6 +23,8 @@ def printIntro():
               "In this game, you will be given a prompt, which you will need to type out (accurately).",
               "While taking a test, you can press Tab to regenerate your test and Enter to quit.", 
               "Then, after you finish, you will be given your typing speed! There are various tests to choose from.",
+              "",
+              "If you want to stop running the program, press Crtl+C to quit. Enjoy!",
               ""]
     
     # prints every line
@@ -77,7 +79,7 @@ def getModeSettings():
 
     # returns the mode if possible, otherwise returns the exit code
     try:
-        return ["essay", "easy", "hard"][int(option)]
+        return ["essay", "easy", "hard"][int(option)-1]
     except:
         return -1
     
