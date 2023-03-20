@@ -1,10 +1,10 @@
 # imports libaries
-from os import system
+from os import system, name as operatingSystem
 from colorama import Fore, Style
 
 def printIntro():
     # clears system
-    system('clear')
+    system('clear' if operatingSystem != "nt" else "cls")
     
     # defines title
     title = "Welcome to Typing Test!"
@@ -36,7 +36,7 @@ def printIntro():
 
 def getLengthSettings():
     # clears system
-    system('clear')
+    system('clear' if operatingSystem != "nt" else "cls")
 
     # defines choice
     option = -1
@@ -58,7 +58,7 @@ def getLengthSettings():
 
 def getModeSettings():
     # clears system
-    system('clear')
+    system('clear' if operatingSystem != "nt" else "cls")
 
     # defines choice
     option = ""

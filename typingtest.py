@@ -3,7 +3,7 @@ import getdata
 from readchar import readkey, key
 from colorama import Style
 from colorama import Fore 
-from os import system
+from os import system, name as operatingSystem
 from time import time as timer
 
 class Test():
@@ -24,7 +24,7 @@ class Test():
         self.time = -1
 
         # prints game
-        system('clear')
+        system('clear' if operatingSystem != "nt" else "cls")
         print(self)
 
     def __str__(self):
@@ -70,7 +70,7 @@ class Test():
                 return
 
             # prints game
-            system('clear')
+            system('clear' if operatingSystem != "nt" else "cls")
             print(self)
 
         # time at end
