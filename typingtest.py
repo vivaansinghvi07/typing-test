@@ -46,7 +46,7 @@ class Test():
 
         # prints remaining
         for index in range(mergeLength, len(self.prompt)):
-            output += f"{Style.RESET_ALL}{self.prompt[index]}"
+            output += f"{Fore.RESET}{self.prompt[index]}"
 
         # detects game ending
         self.over = mergeLength >= len(self.prompt)
@@ -119,6 +119,4 @@ class Test():
         # multiply wpm by the accuracy to get overall wpm
         wpm *= accuracy
 
-        return f"{Style.RESET_ALL}You typed at {Fore.BLUE}{round(wpm, 2)}{Style.RESET_ALL} words per minute, with an accuracy of {Fore.BLUE}{round(accuracy * 100, 2)}%{Style.RESET_ALL}"
-
-import main
+        return f"{Fore.RESET}You typed at {Fore.BLUE}{round(wpm, 2)}{Fore.RESET} words per minute, with an accuracy of {Fore.BLUE}{round(accuracy * 100, 2)}%{Fore.RESET}"
