@@ -19,7 +19,7 @@ def getWords(wordCount, difficulty):
     filename = "1-1000" if difficulty == "easy" else "engmix"
 
     # defines output
-    output = ""
+    output = []
 
     # opens the file
     with open(f"words/{filename}.txt", "r") as f:
@@ -29,7 +29,7 @@ def getWords(wordCount, difficulty):
 
         # gets random lines
         for _ in range(wordCount):
-            output += rand.randint(0, len(lines)-1)
-    
+            output.append(lines[rand.randint(0, len(lines)-1)].strip())
+
     # return
-    return output
+    return " ".join(output)
