@@ -1,6 +1,6 @@
 # imports libaries
 from os import system, name as operatingSystem
-from colorama import Fore, Style
+from colorama import Fore
 
 def printIntro():
     # clears system

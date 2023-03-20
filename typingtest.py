@@ -1,7 +1,6 @@
 # function for word getting data
 import getdata
 from readchar import readkey, key
-from colorama import Style
 from colorama import Fore 
 from os import system, name as operatingSystem
 from time import time as timer
