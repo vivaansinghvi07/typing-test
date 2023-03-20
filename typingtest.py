@@ -106,7 +106,7 @@ class Test():
         length /= 5
 
         # get wpm based on time
-        wpm = (length / self.time) * 60     # gets words per second and multiplies by 60
+        wpm = (length / self.time) * 60 if self.time > 0 else 999    # avoids divide by zero errors
 
         # get accuracy
         correct, total = 0, 0
