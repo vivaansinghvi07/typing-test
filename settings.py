@@ -51,6 +51,7 @@ def getLengthSettings():
             option = int(option)
         except:
             print("Please enter an integer!")
+            option = -1                             # resets in order to avoid error in while loop
             continue
 
     
