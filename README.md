@@ -33,12 +33,26 @@ A simple typing test you can do in your Python terminal!
 - English Word List from [gwicks.net](http://www.gwicks.net/dictionaries.htm)
 
 ## Usage
-Here is an example run-through of what you'd see when playing (of course, given the navigation options it may not look exactly like this):
+Here is what you would see in the introduction:
 
 ![Introduction](example-imgs/intro.png)
 
-![Length Settings](example-imgs/length-settings.png)
+Afterwards, you can select your settings, as shown here:
 
-![Mode Settings](example-imgs/mode-settings.png)
+```
+How many words would you like to type?
+Enter a number between 1 and 200: 7
+```
+```
+What mode would you like to test on?
+
+  1. Sentences
+  2. Easy Words
+  3. Hard Words
+
+Enter "b" to go back, or a number to choose a mode: 2
+```
+
+After you test, this is an example of what the output will look like:
 
 ![Test](example-imgs/testing.png)
