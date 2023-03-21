@@ -58,5 +58,5 @@ class Game():
         # asks if the player wants to continue
         cont = input("Would you like to test again? (y/n): ") in ["y", "Y"]
 
-        # switches mode if player wants to quit
+        # switches state if player wants to quit
         self.state = "mode" if not cont else self.state
