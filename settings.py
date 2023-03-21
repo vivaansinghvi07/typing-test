@@ -13,7 +13,7 @@ def printIntro():
     # prints title in rainbow
     for i in range(len(title)):
         color = eval("Fore." + colors[i % len(colors)])
-        print(f"{color}{title[i]}", end="")                 # a letter with the color corresponding to the index mod 5
+        print(f"{color}{title[i]}", end="")                 # a letter with the color corresponding to the index mod the length of the colors list
     
     # resets and new line
     print(Fore.RESET)
