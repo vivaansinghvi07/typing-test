@@ -46,8 +46,9 @@ def getLengthSettings():
 
     # gets option in range
     while not (0 < option and option < 200):
+        option = input("Enter a number between 1 and 200: ")
         try:
-            option = int(input("Enter a number between 1 and 200: "))
+            option = int(option)
         except:
             print("Please enter an integer!")
             continue
