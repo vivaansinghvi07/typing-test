@@ -9,11 +9,10 @@ def printIntro():
     # defines title
     title = "Welcome to Typing Test!"
     colors = ["RED", "YELLOW", "GREEN", "BLUE", "MAGENTA"]
-    fore = "Fore."
 
     # prints title in rainbow
     for i in range(len(title)):
-        print(f"{eval(fore + colors[i%len(colors)])}{title[i]}", end="")
+        print(f"{eval("Fore." + colors[i % len(colors)])}{title[i]}", end="")   # a letter with the color corresponding to the index mod 5
     
     # resets and new line
     print(Fore.RESET)
