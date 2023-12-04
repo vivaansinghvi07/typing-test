@@ -2,7 +2,7 @@
 import getdata
 from readchar import readkey, key
 from colorama import Fore 
-from os import system, name as operatingSystem
+from os import system, name as operatingSystem, get_terminal_size
 from time import time as timer
 
 class Test():
@@ -24,7 +24,6 @@ class Test():
 
         # prints game
         system('clear' if operatingSystem != "nt" else "cls")
-        print(self)
 
     def __str__(self):
         # string output
@@ -54,6 +53,13 @@ class Test():
         return output
 
     def run(self):
+    
+        # determine the terminal size for printing
+        newLineCount = get_terminal_size().lines
+        # cols, rows = size.columns, size.lines
+        # newLineCount = rows -(-len(self.prompt)//cols)
+        print(newLineCount * "\n", self)
+
         # goes until the prompt is done
         while not self.over:
 
@@ -69,8 +75,7 @@ class Test():
                 return
 
             # prints game
-            system('clear' if operatingSystem != "nt" else "cls")
-            print(self)
+            print("\n" * newLineCount, self)
 
         # time at end
         end = timer()
